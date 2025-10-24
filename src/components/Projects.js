@@ -6,21 +6,12 @@ import "./Projects.css";
 const Projects = () => {
   const projects = [
     {
-      title: "Buzzin'",
-      period: "February – May 2025",
+      title: "CI/CD Build Failure Detection",
+      period: "July 2025 – Present",
       description:
-        "Event management app using Flutter + Firebase (Firestore, Authentication, Storage) with real-time community chat, event registration, and user profile management.",
-      tech: ["Flutter", "Firebase", "Firestore", "Dart"],
-      github: "https://github.com/Geek-Piyush/Buzzin.git",
-      demo: null,
-    },
-    {
-      title: "Vistara",
-      period: "June – July 2025",
-      description:
-        "Tour booking platform developed using Node.js, Express.js, MongoDB Atlas (Mongoose), Multer for file handling, JWT authentication, RESTful APIs, and Stripe for payment integration.",
-      tech: ["Node.js", "Express.js", "MongoDB", "JWT", "Stripe"],
-      github: "https://github.com/Geek-Piyush/Vistara.git",
+        "CI/CD build failure prediction system using Python, Flask, XGBoost, Random Forest, Scikit-learn, Ensemble Learning, ADASYN, SHAP, Optuna, GitHub Actions, RESTful APIs, and Google Cloud Platform (GCP).",
+      tech: ["Python", "Flask", "XGBoost", "ML", "GCP"],
+      github: null,
       demo: null,
     },
     {
@@ -33,12 +24,21 @@ const Projects = () => {
       demo: "#",
     },
     {
-      title: "CI/CD Build Failure Detection",
-      period: "July 2025 – Present",
+      title: "Vistara",
+      period: "June – July 2025",
       description:
-        "CI/CD build failure prediction system using Python, Flask, XGBoost, Random Forest, Scikit-learn, Ensemble Learning, ADASYN, SHAP, Optuna, GitHub Actions, RESTful APIs, and Google Cloud Platform (GCP).",
-      tech: ["Python", "Flask", "XGBoost", "ML", "GCP"],
-      github: null,
+        "Tour booking platform developed using Node.js, Express.js, MongoDB Atlas (Mongoose), Multer for file handling, JWT authentication, RESTful APIs, and Stripe for payment integration.",
+      tech: ["Node.js", "Express.js", "MongoDB", "JWT", "Stripe"],
+      github: "https://github.com/Geek-Piyush/Vistara.git",
+      demo: null,
+    },
+    {
+      title: "Buzzin'",
+      period: "February – May 2025",
+      description:
+        "Event management app using Flutter + Firebase (Firestore, Authentication, Storage) with real-time community chat, event registration, and user profile management.",
+      tech: ["Flutter", "Firebase", "Firestore", "Dart"],
+      github: "https://github.com/Geek-Piyush/Buzzin.git",
       demo: null,
     },
   ];
