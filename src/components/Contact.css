@@ -1,0 +1,135 @@
+.contact-section {
+  background: var(--bg-dark);
+  text-align: center;
+}
+
+.contact-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: -20px auto 50px;
+  line-height: 1.6;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  background: var(--bg-card-hover);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  background: white;
+  color: #0a0a0a;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.contact-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.contact-username {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.contact-card:hover .contact-username {
+  color: white;
+}
+
+.contact-cta {
+  margin-top: 30px;
+}
+
+.btn-large {
+  padding: 13px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-card {
+    padding: 30px 25px;
+  }
+
+  .contact-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .contact-name {
+    font-size: 1.15rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.9rem;
+    margin: -10px auto 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 25px 20px;
+  }
+
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contact-name {
+    font-size: 1.05rem;
+  }
+
+  .btn-large {
+    padding: 11px 28px;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+}

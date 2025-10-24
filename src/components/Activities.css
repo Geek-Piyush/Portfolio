@@ -1,0 +1,140 @@
+.activities-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+/* Two-Box Layout */
+.activities-two-box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.activities-box {
+  background: rgba(26, 26, 26, 0.8);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: all 0.25s ease;
+}
+
+.activities-box:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.activities-box-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-item-compact {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.25s ease;
+}
+
+.activity-item-compact:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateX(5px);
+}
+
+.activity-icon-compact {
+  min-width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.activity-text-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.activity-role-compact {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.3;
+}
+
+.activity-org-compact {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+.activity-text-simple {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.extra-activity:hover .activity-text-simple {
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .activities-two-box-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .activities-box {
+    padding: 20px;
+  }
+
+  .activities-box-title {
+    font-size: 1.2rem;
+  }
+
+  .activity-item-compact {
+    padding: 10px;
+  }
+
+  .activity-icon-compact {
+    min-width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .activities-box {
+    padding: 18px;
+  }
+
+  .activity-role-compact {
+    font-size: 0.85rem;
+  }
+
+  .activity-org-compact,
+  .activity-text-simple {
+    font-size: 0.75rem;
+  }
+}
