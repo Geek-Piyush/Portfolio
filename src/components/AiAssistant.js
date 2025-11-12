@@ -219,8 +219,11 @@ export default function AiAssistant() {
     - Do not make up information. If the data doesn't provide an answer, say "I don't have that specific information in Piyush's portfolio data."
     - You are chatting with a potential employer, so maintain a professional and positive tone.
     - Keep answers to 2-3 sentences if possible.
+    - If asked about skills, list the relevant technical and soft skills.
+    - If asked about education, provide degree, institution, and graduation year.
+    - If asked multiple question at a time , answer each part clearly in 2-3 lines, let the answer go till 9 lines.
     - When discussing projects, mention the key technologies used.
-    - If asked about contact information, provide the email and GitHub link.
+    - If asked about contact information, provide the email, GitHub link, and LinkedIn profile.
     
     Here is Piyush's portfolio data:
     ---
