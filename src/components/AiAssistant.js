@@ -233,10 +233,10 @@ export default function AiAssistant() {
 
   // Function to call the Gemini API
   const getBotResponse = async (userQuery, retries = 3, delay = 1000) => {
-    const apiKey =
-      process.env.REACT_APP_GEMINI_API_KEY || process.env.GEMINI_API_KEY || ""; // API key from environment variable
+    const apiKey = process.env.REACT_APP_GEMINI_API_KEY || ""; // API key from environment variable
 
     if (!apiKey) {
+      console.error("Gemini API key is missing");
       return "⚠️ AI Assistant is not configured. Please add your Gemini API key to the environment variables.";
     }
 
@@ -257,12 +257,24 @@ export default function AiAssistant() {
       });
 
       if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error("API Error Response:", response.status, errorData);
+
         if (response.status === 429 && retries > 0) {
           // Exponential backoff for rate limiting
           await new Promise((res) => setTimeout(res, delay));
           return getBotResponse(userQuery, retries - 1, delay * 2);
         }
-        throw new Error(`API error: ${response.statusText}`);
+
+        if (response.status === 400) {
+          return "⚠️ There was an error processing your request. The API configuration may be incorrect.";
+        }
+
+        if (response.status === 403) {
+          return "⚠️ API key is invalid or doesn't have permission. Please check the configuration.";
+        }
+
+        throw new Error(`API error: ${response.status} ${response.statusText}`);
       }
 
       const result = await response.json();
@@ -271,10 +283,11 @@ export default function AiAssistant() {
       if (text) {
         return text;
       } else {
+        console.error("Invalid API response structure:", result);
         throw new Error("Invalid response structure from API.");
       }
     } catch (error) {
-      console.error(error);
+      console.error("getBotResponse error:", error);
       if (retries > 0) {
         // Retry for network errors
         await new Promise((res) => setTimeout(res, delay));
