@@ -37,6 +37,10 @@ const Skills = () => {
       items: ["Dart", "Flutter"],
       icon: <Smartphone size={20} />,
     },
+    "Machine Learning": {
+      items: ["Pandas", "NumPy", "Scikit-learn", "SHAP"],
+      icon: <Brain size={20} />,
+    },
     "UI/UX Design": {
       items: [
         "Wireframing",
