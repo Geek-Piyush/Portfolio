@@ -8,7 +8,6 @@ import Projects from "./components/Projects";
 import Activities from "./components/Activities";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import AiAssistant from "./components/AiAssistant";
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,7 +31,6 @@ function App() {
       <Activities />
       <Contact />
       <Footer />
-      <AiAssistant />
     </div>
   );
 }
