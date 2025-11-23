@@ -21,7 +21,7 @@ const Projects = () => {
         "Microloan and credit trust platform developed using React, Node.js, Express.js, MongoDB Atlas (Mongoose), JWT authentication, Multer, RESTful APIs, and PhonePe UPI payment integration.",
       tech: ["React", "Node.js", "Express.js", "MongoDB", "PhonePe UPI"],
       github: "https://github.com/Geek-Piyush/FinTrustChain.git",
-      demo: "#",
+      demo: "https://fintrust.piyushnashikkar.dev/",
     },
     {
       title: "Vistara",
