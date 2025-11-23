@@ -231,26 +231,18 @@ export default function AiAssistant() {
     ---
     Now, please answer the user's question.`;
 
-  // Function to call the Gemini API
+  // Function to call the Gemini API via serverless function (secure)
   const getBotResponse = async (userQuery, retries = 3, delay = 1000) => {
-    const apiKey = process.env.REACT_APP_GEMINI_API_KEY || ""; // API key from environment variable
-
-    if (!apiKey) {
-      console.error("Gemini API key is missing");
-      return "⚠️ AI Assistant is not configured. Please add your Gemini API key to the environment variables.";
-    }
-
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${apiKey}`;
+    // Use Vercel API route endpoint (works in dev and production)
+    const functionUrl = "/api/chat";
 
     const payload = {
-      contents: [{ parts: [{ text: userQuery }] }],
-      systemInstruction: {
-        parts: [{ text: systemPrompt }],
-      },
+      userQuery,
+      systemPrompt,
     };
 
     try {
-      const response = await fetch(apiUrl, {
+      const response = await fetch(functionUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -272,6 +264,10 @@ export default function AiAssistant() {
 
         if (response.status === 403) {
           return "⚠️ API key is invalid or doesn't have permission. Please check the configuration.";
+        }
+
+        if (response.status === 500) {
+          return "⚠️ AI Assistant is not configured properly. Please contact the administrator.";
         }
 
         throw new Error(`API error: ${response.status} ${response.statusText}`);
