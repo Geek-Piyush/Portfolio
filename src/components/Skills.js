@@ -38,7 +38,14 @@ const Skills = () => {
       icon: <Smartphone size={20} />,
     },
     "Machine Learning": {
-      items: ["Pandas", "NumPy", "Scikit-learn", "SHAP"],
+      items: [
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "SHAP",
+        "Optuna",
+        "Matplotlib",
+      ],
       icon: <Brain size={20} />,
     },
     "UI/UX Design": {
