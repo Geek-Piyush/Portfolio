@@ -53,6 +53,39 @@
   flex-grow: 1;
 }
 
+.project-resources {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.85rem;
+  margin-top: -8px;
+  padding: 8px 0;
+}
+
+.resources-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.resource-link {
+  color: rgba(100, 150, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.resource-link:hover {
+  color: rgba(120, 170, 255, 1);
+  text-decoration: underline;
+}
+
+.resource-separator {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
 .project-tech {
   display: flex;
   flex-wrap: wrap;

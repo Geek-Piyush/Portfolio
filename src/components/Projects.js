@@ -22,6 +22,16 @@ const Projects = () => {
       tech: ["React", "Node.js", "Express.js", "MongoDB", "PhonePe UPI"],
       github: "https://github.com/Geek-Piyush/FinTrustChain.git",
       demo: "https://fintrust.piyushnashikkar.dev/",
+      resources: [
+        {
+          name: "API Workflow",
+          url: "https://www.canva.com/design/DAGxJ5QVcsw/MoqUfL5WccXMicNbGCjSvg/edit?utm_content=DAGxJ5QVcsw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+        },
+        {
+          name: "Planning Docs",
+          url: "https://www.notion.so/FinTrustChain-23ca97ec578a80f99304eb9fd55b77b0?source=copy_link",
+        },
+      ],
     },
     {
       title: "Vistara",
@@ -62,6 +72,26 @@ const Projects = () => {
               <span className="project-period">{project.period}</span>
             </div>
             <p className="project-description">{project.description}</p>
+            {project.resources && (
+              <div className="project-resources">
+                <span className="resources-label">Resources:</span>
+                {project.resources.map((resource, idx) => (
+                  <React.Fragment key={idx}>
+                    <a
+                      href={resource.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="resource-link"
+                    >
+                      {resource.name}
+                    </a>
+                    {idx < project.resources.length - 1 && (
+                      <span className="resource-separator"> | </span>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+            )}
             <div className="project-tech">
               {project.tech.map((tech, idx) => (
                 <span key={idx} className="tech-badge">
