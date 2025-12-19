@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import "./Navbar.css";
 
+const navItems = [
+  { name: "Home", href: "#home" },
+  { name: "Education", href: "#education" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
+
 const Navbar = ({ scrolled }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-
-  const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Education", href: "#education" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
