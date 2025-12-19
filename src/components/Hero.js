@@ -41,13 +41,13 @@ const Hero = () => {
           <p className="bio-text">
             I am a final-year B.Tech Computer Science and Design student
             passionate about building intuitive web and mobile solutions. I have
-            hands-on experience in backend development using Node.js,
-            Express.js, and the MERN stack, along with Flutter, MySQL, MongoDB,
-            and cloud-ready technologies. My skill set also includes
-            Python-based machine learning workflows using Scikit-learn. I enjoy
-            designing scalable backend systems paired with thoughtful user
-            experiences and thrive in collaborative, Agile development
-            environments with strong communication and teamwork.
+            hands-on experience in backend development using the MERN stack,
+            along with Flutter, MySQL, MongoDB, and cloud-ready technologies. My
+            skill set also includes Python-based machine learning workflows
+            using Scikit-learn. I enjoy designing scalable backend systems
+            paired with thoughtful user experiences and thrive in collaborative,
+            Agile development environments with strong communication and
+            teamwork.
           </p>
         </motion.div>
 
