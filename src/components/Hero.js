@@ -20,7 +20,7 @@ const Hero = () => {
               Contact
             </a>
             <a
-              href="/assets/resume.pdf"
+              href="/assets/resume_piyush.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-resume"
